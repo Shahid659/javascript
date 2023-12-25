@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>My Home</h1>
+<p id="demo"></p>
+<script>
+    let requestURL = "https://dummyjson.com/products/1";
+    const xhr= new XMLHttpRequest();
+    xhr.open('GET', requestURL);
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState === 4){
+           
+            let datas = JSON.parse(this.responseText);
+           
+            console.log(datas);   
+        
+            // printing value of an object using for of LOOP
+            //  for (const data of Object.values(datas)) {
+            //     console.log(`${data}`);
+            //         document.write(`${data} <br>`);
+            //     }
+        }
+    }
+    xhr.send();
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project2</title>
+</head>
+<body>
+    <button class="button" id="red">Red</button>
+    <button class="button" id="green">Green</button>
+    <button class="button" id="yellow">yellow</button>
+<script>
+    
+    const buttons= document.querySelectorAll('.button');    
+    
+    buttons.forEach( function (button){
+        
+        button.addEventListener('click', function(e){
+            document.body.style.backgroundColor= e.target.id;
+        });
+    })
+
+</script>
+</body>
+</html>
